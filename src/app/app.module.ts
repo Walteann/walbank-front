@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -7,7 +8,7 @@ import { LayoutModule } from './core/layouts/layouts-module';
 
 @NgModule({
 	declarations: [AppComponent],
-	imports: [BrowserModule, AppRoutingModule, LayoutModule],
+	imports: [BrowserModule, CommonModule, AppRoutingModule, LayoutModule],
 	providers: [],
 	bootstrap: [AppComponent],
 })

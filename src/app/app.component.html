@@ -1,4 +1,8 @@
 <div class="container">
-	<wal-sidebar></wal-sidebar>
-	<router-outlet></router-outlet>
+	<wal-sidebar #walSidebar></wal-sidebar>
+	<main #main>
+		<wal-top-bar (onToggleMenu)="onToggleMenu()"></wal-top-bar>
+		<router-outlet></router-outlet>
+daskdasldj
+	</main>
 </div>
