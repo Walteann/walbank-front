@@ -11,7 +11,6 @@ export class SidebarComponent {
 
 	constructor() {}
 
-
 	get brandDevicedSelected(): string {
 
 		return this.navigation?.nativeElement?.classList?.contains('active') ?
