@@ -5,32 +5,32 @@
 				<img [src]="brandDevicedSelected" alt="" />
 			</a>
 		</li>
-		<li>
-			<a href="#">
+		<li [routerLink]="['/home']" routerLinkActive="active" >
+			<a>
 				<span class="icon">
 					<span class="material-icons-outlined">home</span>
 				</span>
 				<span class="title">Inicio</span>
 			</a>
 		</li>
-		<li>
-			<a href="#">
+		<li [routerLink]="['/tickets']" routerLinkActive="active" >
+			<a>
 				<span class="icon">
 					<span class="material-icons-outlined">receipt</span>
 				</span>
 				<span class="title">Boletos</span>
 			</a>
 		</li>
-		<li>
-			<a href="#">
+		<li [routerLink]="['/payments']" routerLinkActive="active" >
+			<a>
 				<span class="icon">
 					<span class="material-icons-outlined">payments</span>
 				</span>
 				<span class="title">Pagamentos</span>
 			</a>
 		</li>
-		<li>
-			<a href="#">
+		<li [routerLink]="['/settings']" routerLinkActive="active" >
+			<a>
 				<span class="icon">
 					<span class="material-icons-outlined">settings</span>
 				</span>

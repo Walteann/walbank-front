@@ -78,8 +78,8 @@
 	}
 }
 
-.navigation ul li:hover,
-.navigation ul li.hovered {
+// Navigation
+.navigation ul li.active {
 	background-color: $four-color;
 
 	a .icon span,
@@ -91,18 +91,34 @@
 	a .icon span {
 		font-weight: 100;
 	}
+
 }
 
-.navigation ul li:hover a,
-.navigation ul li.hovered a {
+.navigation ul li:hover {
+	a .icon span,
+	a .title {
+		color: $primary-color;
+		cursor: pointer;
+		transition: .5s;
+	}
+}
+
+.navigation ul li.active:hover {
+	a .icon span,
+	a .title {
+		color: $secondary-color;
+		transition: .5s;
+	}
+}
+
+.navigation ul li.active a {
     color: $primary-color;
 }
 
 
 /* Curve outside */
 
-.navigation ul li:hover a::before,
-.navigation ul li.hovered a::before {
+.navigation ul li.active a::before {
     content: '';
     position: absolute;
     right: 0;
@@ -115,8 +131,7 @@
     pointer-events: none;
 }
 
-.navigation ul li:hover a::after,
-.navigation ul li.hovered a::after {
+.navigation ul li.active a::after {
 
     content: '';
     position: absolute;

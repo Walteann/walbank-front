@@ -8,6 +8,18 @@ const routes: Routes = [
 		loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule)
 	},
 	{
+		path: 'payments',
+		loadChildren: () => import('./pages/payments/payments.module').then(m => m.PaymentsModule)
+	},
+	{
+		path: 'tickets',
+		loadChildren: () => import('./pages/tickets/tickets.module').then(m => m.TicketsModule)
+	},
+	{
+		path: 'settings',
+		loadChildren: () => import('./pages/settings/settings.module').then(m => m.SettingsModule)
+	},
+	{
 		path: '',
 		redirectTo: 'home',
 		pathMatch: 'full'
