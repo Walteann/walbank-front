@@ -8,6 +8,7 @@
 	border-left: 10px solid $secondary-color;
 	transition: 0.5s;
 	overflow: hidden;
+	z-index: 2
 }
 
 .navigation.active{
@@ -127,4 +128,31 @@
     border-radius: 50%;
     box-shadow: 35px -35px 0 10px $four-color;
     pointer-events: none;
+}
+
+
+// Responsive
+@media (max-width: 991px) {
+    .navigation {
+        left: -310px;
+    }
+
+    .navigation.active {
+        left: 0;
+        width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+
+	.navigation {
+        width: 100%;
+        left: -100%;
+        z-index: w;
+    }
+
+    .navigation.active {
+        width: 100%;
+        left: 0;
+    }
 }

@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
-import { GridModule } from './grids/grids.module';
+import { WalGridDirective } from './wal-grid.directive';
 
 const DIRECTIVES = [
-	GridModule
+	WalGridDirective
 ]
 
 @NgModule({
-	imports: DIRECTIVES,
+	declarations: DIRECTIVES,
 	exports: DIRECTIVES,
 })
 export class DirectivesModule { }

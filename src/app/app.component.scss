@@ -1,4 +1,4 @@
-@import './../styles/variables';
+@import "./../styles/variables";
 
 .container {
 	display: relative;
@@ -6,14 +6,32 @@
 }
 
 main {
-    position: absolute;
-    width: calc(100% - 300px);
-    left: 300px;
-    min-height: 100vh;
-    transition: 0.5s;
+	position: absolute;
+	width: calc(100% - 300px);
+	left: 300px;
+	min-height: 100vh;
+	transition: 0.5s;
+
+	.main-section {
+		padding: 20px;
+	}
+	&.active {
+		width: calc(100% - 80px);
+		left: 80px;
+	}
 }
 
-main.active {
-    width: calc(100% - 80px);
-    left: 80px;
+// Reponsive
+
+@media (max-width: 991px) {
+	main {
+		width: 100%;
+		left: 0;
+
+		&.active {
+			left: 300px;
+		}
+	}
 }
+
+
