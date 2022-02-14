@@ -1,0 +1,62 @@
+@import 'variables';
+
+button {
+	border: none;
+	min-width: 150px;
+	margin: 10px;
+	padding: 12px;
+	border-radius: 6px;
+	cursor: pointer;
+	transition: .5s;
+}
+
+.primary {
+	background-color: $primary-color;
+	color: $white;
+	font-weight: bold;
+}
+
+button:hover {
+	opacity: 0.8;
+}
+
+button:disabled {
+	cursor: initial;
+	background-color: #393e4654;
+	opacity: 1;
+}
+
+.secondary {
+	background-color: $secondary-color;
+	color: $white;
+	font-weight: bold;
+}
+
+// .secondary:hover {
+// 	opacity: 0.8;
+// }
+
+// .secondary:disabled {
+// 	cursor: initial;
+// 	background-color: #393e4654;
+// 	opacity: 1;
+// }
+
+
+.ghost {
+	background-color: transparent;
+	color: $primary-color;
+	font-weight: bold;
+	border: 1px solid $primary-color;
+}
+
+.ghost:hover {
+	border-color: $secondary-color;
+	color: $secondary-color;
+}
+
+.ghost:disabled {
+	border-color: #393e4654;
+	color: #393e4654;
+	background-color: transparent;
+}
