@@ -36,3 +36,17 @@
 		<wal-button buttonClass="ghost" [disabled]="true">Buscar</wal-button>
 	</wal-card>
 </div>
+
+<div [walGrid]="2">
+	<wal-card>
+
+		<form [formGroup]="formGroup">
+			<div>
+				<wal-input-text formControlName="nome" label="Nome"></wal-input-text>
+				<wal-input-text formControlName="sobreNome" label="Sobrenome"></wal-input-text>
+				<wal-input-text formControlName="ultimoNome" label="UltimoNome"></wal-input-text>
+			</div>
+			<wal-button (click)="onSend()">Enviar</wal-button>
+		</form>
+	</wal-card>
+</div>

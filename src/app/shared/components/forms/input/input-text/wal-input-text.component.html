@@ -1,5 +1,10 @@
-
 <div class="wal-input">
-	<label>{{label}}</label>
-	<input type="text" [placeholder]="placeholder">
+	<label>{{ label }}</label>
+	<input
+		type="text"
+		[formControl]="input"
+		[placeholder]="placeholder"
+		(blur)="onTouch()"
+		(ngModelChange)="onChange($event)"
+	/>
 </div>
