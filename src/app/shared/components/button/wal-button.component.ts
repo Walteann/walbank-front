@@ -10,4 +10,5 @@ export class WalButtonComponent {
 	@Input() disabled: boolean;
 	@Input() buttonClass = 'primary';
 	@Input() type = 'button';
+
 }
