@@ -1,16 +1,7 @@
-import {
-	Component,
-	forwardRef,
-	Input,
-	Optional,
-	SkipSelf,
-} from '@angular/core';
-import {
-	ControlValueAccessor,
-	FormControl,
-	NG_VALUE_ACCESSOR,
-	NgControl,
-} from '@angular/forms';
+import { Component, forwardRef, Injector, Input } from '@angular/core';
+import { NG_VALUE_ACCESSOR } from '@angular/forms';
+
+import { ControlValueAccessorModel } from '../control-value-acessor.model';
 
 @Component({
 	selector: 'wal-input-text',
@@ -21,31 +12,14 @@ import {
 			provide: NG_VALUE_ACCESSOR,
 			useExisting: forwardRef(() => WalInputTextComponent),
 			multi: true,
-		},
+		}
 	],
 })
-export class WalInputTextComponent implements ControlValueAccessor {
+export class WalInputTextComponent extends ControlValueAccessorModel {
 	@Input() label: string;
 	@Input() placeholder = '';
 
-	onChange: any = () => {}
-	onTouch: any = () => {}
-
-	input = new FormControl();
-
-	writeValue(obj: any): void {
-		this.input.setValue(obj);
-	}
-
-	registerOnChange(fn: any): void {
-		this.onChange = fn;
-	}
-
-	registerOnTouched(fn: any): void {
-		this.onTouch = fn;
-	}
-
-	setDisabledState(isDisabled: boolean): void {
-		isDisabled ? this.input.disable() : this.input.enable();
+	constructor(injector: Injector) {
+		super(injector);
 	}
 }

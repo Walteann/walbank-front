@@ -1,4 +1,4 @@
-<div [walGrid]="2">
+<!-- <div [walGrid]="2">
 	<wal-card>
 		<h2>Inputs</h2>
 		<wal-input-text label="nome"></wal-input-text>
@@ -35,18 +35,19 @@
 		<wal-button buttonClass="ghost">Buscar</wal-button>
 		<wal-button buttonClass="ghost" [disabled]="true">Buscar</wal-button>
 	</wal-card>
-</div>
+</div> -->
+
 
 <div [walGrid]="2">
 	<wal-card>
 
-		<form [formGroup]="formGroup">
+		<form [formGroup]="formGroup" (submit)="onSubmit()">
 			<div>
 				<wal-input-text formControlName="nome" label="Nome"></wal-input-text>
 				<wal-input-text formControlName="sobreNome" label="Sobrenome"></wal-input-text>
 				<wal-input-text formControlName="ultimoNome" label="UltimoNome"></wal-input-text>
 			</div>
-			<wal-button (click)="onSend()">Enviar</wal-button>
+			<wal-button type="submit">Enviar</wal-button>
 		</form>
 	</wal-card>
 </div>

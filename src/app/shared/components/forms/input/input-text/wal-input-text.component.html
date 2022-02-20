@@ -2,9 +2,11 @@
 	<label>{{ label }}</label>
 	<input
 		type="text"
-		[formControl]="input"
+		[formControl]="formControl"
 		[placeholder]="placeholder"
 		(blur)="onTouch()"
 		(ngModelChange)="onChange($event)"
 	/>
+
+	<wal-error [control]="formControl"></wal-error>
 </div>

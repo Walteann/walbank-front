@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { WalCheckboxComponent } from './checkbox/wal-checkbox.component';
-import { ControlValueAccessorConnector } from './control-value-acessor-connector';
+import { WalErrorComponent } from './error/wal-error.component';
 import { WalInputTextComponent } from './input-text/wal-input-text.component';
 import { WalRadioComponent } from './radio/wal-radio.component';
 
@@ -11,7 +11,7 @@ const INPUTS_COMPONENTS = [
 	WalCheckboxComponent,
 	WalInputTextComponent,
 	WalRadioComponent,
-	ControlValueAccessorConnector,
+	WalErrorComponent
 ];
 
 @NgModule({
