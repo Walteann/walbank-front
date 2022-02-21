@@ -78,6 +78,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
 					},
 				},
 			},
+			responsive: true
 		} as any;
 
 		const myChart = new Chart(this.myChartBar.nativeElement, config);

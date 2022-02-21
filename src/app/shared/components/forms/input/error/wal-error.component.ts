@@ -38,7 +38,6 @@ export class WalErrorComponent implements OnInit, OnDestroy {
 	ngOnInit(): void {
 		if (this.control) {
 			this.subscription = this.control.statusChanges
-				.pipe(debounceTime(500))
 				.subscribe((status) => {
 					const { invalid, touched, dirty } = this.control;
 					this.show = of(invalid && (touched || dirty)).pipe(

@@ -46,6 +46,13 @@
 				<wal-input-text formControlName="nome" label="Nome"></wal-input-text>
 				<wal-input-text formControlName="sobreNome" label="Sobrenome"></wal-input-text>
 				<wal-input-text formControlName="ultimoNome" label="UltimoNome"></wal-input-text>
+				<wal-select
+					label="City"
+					optionLabel="name"
+					optionValue="code"
+					formControlName="city"
+					[options]="cities">
+				</wal-select>
 			</div>
 			<wal-button type="submit">Enviar</wal-button>
 		</form>

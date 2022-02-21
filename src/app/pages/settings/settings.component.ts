@@ -1,12 +1,20 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, Validators, FormArray } from '@angular/forms';
 
+interface City {
+    name: string,
+    code: string
+}
 @Component({
 	selector: 'app-settings',
 	templateUrl: './settings.component.html',
 	styleUrls: ['./settings.component.scss'],
 })
 export class SettingsComponent {
+
+	cities: City[];
+
+    selectedCity: City;
 
 
 	formGroup: FormGroup;
@@ -15,9 +23,18 @@ export class SettingsComponent {
 	) {
 		this.formGroup = formBuilder.group({
 			nome: [null, [Validators.required]],
+			city: [null, [Validators.required]],
 			sobreNome: ['', [Validators.maxLength(3)]],
 			ultimoNome: new FormControl({value: 'dsadsad', disabled: true})
-		})
+		});
+
+		this.cities = [
+            {name: 'New York', code: 'NY'},
+            {name: 'Rome', code: 'RM'},
+            {name: 'London', code: 'LDN'},
+            {name: 'Istanbul', code: 'IST'},
+            {name: 'Paris', code: 'PRS'}
+        ];
 	}
 
 
