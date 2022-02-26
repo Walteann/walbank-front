@@ -16,7 +16,38 @@ export class HomeComponent implements OnInit, AfterViewInit {
 	@ViewChild('myChartBar') myChartBar: ElementRef;
 	@ViewChild('myChartDoughnut') myChartDoughnut: ElementRef;
 
-
+	cars = [
+		{
+			vin: 'Hyundai',
+			year: '2020',
+			brand: 'Hb20',
+			color: 'Prata'
+		},
+		{
+			vin: 'Hyundai 2',
+			year: '2020',
+			brand: 'Hb21',
+			color: 'Prata'
+		},
+		{
+			vin: 'Hyundai 3',
+			year: '2020',
+			brand: 'Hb34',
+			color: 'Azul'
+		},
+		{
+			vin: 'Hyundai 4',
+			year: '2020',
+			brand: 'Hb20',
+			color: 'Cinxa'
+		},
+		{
+			vin: 'Hyundai 5',
+			year: '2020',
+			brand: 'Hb20',
+			color: 'Vermelho'
+		},
+	]
 
 	constructor() {
 		Chart.register(...registerables);
