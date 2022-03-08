@@ -1,3 +1,4 @@
+import { WalHeaderNavModule } from './../../core/layouts/header-nav/header-nav.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PaymentsComponent } from './payments.component';
@@ -8,11 +9,17 @@ const routes = [
 	{
 		path: '',
 		component: PaymentsComponent,
+		data: { breadcrumb: 'Pagamentos' }
 	},
 ];
 
 @NgModule({
 	declarations: [PaymentsComponent],
-	imports: [CommonModule, RouterModule.forChild(routes), SharedModule],
+	imports: [
+		CommonModule,
+		RouterModule.forChild(routes),
+		SharedModule,
+		WalHeaderNavModule,
+	],
 })
 export class PaymentsModule {}

@@ -1,0 +1,17 @@
+.wal-header-nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+
+	&__breadcrumb {
+		padding: 10px 0;
+	}
+
+	&__content {
+		& wal-button > button[type=button] {
+			margin: 0 !important;
+		}
+	}
+}
+
