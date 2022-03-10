@@ -9,6 +9,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { WalHeaderInfoModule } from '../../shared/components/header-info/wal-header-info.module';
 import { NewTicketComponent } from './new-ticket/new-ticket.component';
 import { TicketsComponent } from './tickets.component';
+import { CardTicketComponent } from './card-ticket/card-ticket.component';
 
 const routes = [
 	{
@@ -24,7 +25,7 @@ const routes = [
 ];
 
 @NgModule({
-	declarations: [TicketsComponent, NewTicketComponent],
+	declarations: [TicketsComponent, NewTicketComponent, CardTicketComponent],
 	imports: [
 		CommonModule,
 		RouterModule.forChild(routes),

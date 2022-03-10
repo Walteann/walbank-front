@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { TICKETS_MOCK } from './tickets-mock.const';
 
 @Component({
 	selector: 'app-tickets',
 	templateUrl: './tickets.component.html',
 	styleUrls: ['./tickets.component.scss'],
+	host: {'class': 'tickets'}
 })
 export class TicketsComponent {
 
@@ -26,7 +28,9 @@ export class TicketsComponent {
 			value: 4
 		}
 		// TODO: Criar um banco de dados com essas categorias
-	]
+	];
+
+	tickets = TICKETS_MOCK;
 
 	formFilter: FormGroup;
 

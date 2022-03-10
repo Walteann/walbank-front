@@ -24,3 +24,10 @@
 		</div>
 	</form>
 </wal-card>
+
+<div class="tickets-grid">
+	<ng-container *ngFor="let ticket of tickets">
+		<card-ticket [ticket]="ticket"></card-ticket>
+	</ng-container>
+</div>
+

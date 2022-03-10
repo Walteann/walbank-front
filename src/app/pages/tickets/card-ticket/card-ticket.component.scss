@@ -1,0 +1,83 @@
+@import "variables";
+
+.card-ticket {
+	background-color: $white;
+	margin: 8px;
+	padding: 15px 25px;
+	border-top-right-radius: 1rem;
+	border-bottom-right-radius: 1rem;
+	box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+	font-family: "Roboto";
+	font-weight: 300;
+
+	position: relative;
+
+	&__title,
+	&__amount {
+		font-size: 24px;
+		line-height: 35px;
+	}
+
+	&__amount {
+		font-size: 30px;
+	}
+
+	&__dates {
+		display: flex;
+		font-size: 14px;
+		line-height: 30px;
+
+		p {
+			display: flex;
+			align-items: center;
+			padding-right: 10px;
+
+			& > span:nth-child(1) {
+				font-size: 15px;
+				padding-bottom: 3px;
+				padding-right: 6px;
+			}
+		}
+
+		&__dueDate {
+			& > span:nth-child(1) {
+				color: $primary-color;
+			}
+		}
+
+		&__datePaid {
+			& > span:nth-child(1) {
+				color: #22c55e;
+			}
+		}
+	}
+
+	// .iconMask {
+	// 	position: absolute;
+	// 	font-size: 90px;
+	// 	right: -17px;
+	// 	bottom: -21px;
+	// 	opacity: 0.3;
+	// }
+
+	// TODO: verificar se tem outra solucao
+	.iconMask {
+		position: absolute;
+		font-size: 100px;
+		right: -24px;
+		bottom: -28px;
+		opacity: 0.3;
+		clip: rect(0px, 76px, 72px, 0px);
+	}
+}
+
+.ticket-paid {
+	border-left-color: #22c55e;
+	border-left-width: 8px;
+	border-left-style: solid;
+}
+
+// .card-ticket-host {
+// 	position: relative;
+
+// }

@@ -1,0 +1,15 @@
+<div class="card-ticket ticket-paid">
+	<span class="material-icons-outlined iconMask"> check_circle </span>
+	<h2 class="card-ticket__title">{{ ticket.title }}</h2>
+	<p class="card-ticket__amount">R$ {{ ticket.amount }}</p>
+	<div class="card-ticket__dates">
+		<p class="card-ticket__dates__dueDate">
+			<span class="material-icons-outlined"> calendar_today </span>
+			<span>{{ ticket.dueDate | date: "dd/MM/yyyy" }}</span>
+		</p>
+		<p class="card-ticket__dates__datePaid" *ngIf="ticket.datePaid">
+			<span class="material-icons-outlined"> verified </span>
+			<span>{{ ticket.datePaid | date: "dd/MM/yyyy" }}</span>
+		</p>
+	</div>
+</div>
