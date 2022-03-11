@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { TICKET_STATUS } from './status-ticket.const';
 
 interface Ticket {
 	id: number;
@@ -20,4 +21,8 @@ export class CardTicketComponent implements OnInit {
 	constructor() {}
 
 	ngOnInit(): void {}
+
+	statusTicket(status: string): string {
+		return TICKET_STATUS[status].class || null;
+	}
 }

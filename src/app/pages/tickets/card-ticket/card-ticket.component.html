@@ -1,5 +1,5 @@
-<div class="card-ticket ticket-paid">
-	<span class="material-icons-outlined iconMask"> check_circle </span>
+<div class="card-ticket" [ngClass]="statusTicket(ticket.status)">
+	<span class="material-icons-outlined iconMask"> {{ ticket.status | ticketStatusIcon }} </span>
 	<h2 class="card-ticket__title">{{ ticket.title }}</h2>
 	<p class="card-ticket__amount">R$ {{ ticket.amount }}</p>
 	<div class="card-ticket__dates">

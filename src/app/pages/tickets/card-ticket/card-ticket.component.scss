@@ -52,15 +52,6 @@
 		}
 	}
 
-	// .iconMask {
-	// 	position: absolute;
-	// 	font-size: 90px;
-	// 	right: -17px;
-	// 	bottom: -21px;
-	// 	opacity: 0.3;
-	// }
-
-	// TODO: verificar se tem outra solucao
 	.iconMask {
 		position: absolute;
 		font-size: 100px;
@@ -69,15 +60,36 @@
 		opacity: 0.3;
 		clip: rect(0px, 76px, 72px, 0px);
 	}
-}
 
-.ticket-paid {
-	border-left-color: #22c55e;
 	border-left-width: 8px;
 	border-left-style: solid;
 }
 
-// .card-ticket-host {
-// 	position: relative;
+.ticket-paid {
+	border-left-color: #22c55e;
+	.iconMask {
+		color: #22c55e;
+	}
+}
 
-// }
+.ticket-expired {
+	border-left-color: #EF4444;
+	.iconMask {
+		color: #EF4444;
+	}
+}
+
+.ticket-late {
+	border-left-color: #E28A06;
+	.iconMask {
+		color: #E28A06;
+	}
+}
+
+.ticket-pendent {
+	border-left-color: #393E46;
+	.iconMask {
+		color: #393E46;
+	}
+}
+

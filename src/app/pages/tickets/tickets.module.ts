@@ -10,6 +10,7 @@ import { WalHeaderInfoModule } from '../../shared/components/header-info/wal-hea
 import { NewTicketComponent } from './new-ticket/new-ticket.component';
 import { TicketsComponent } from './tickets.component';
 import { CardTicketComponent } from './card-ticket/card-ticket.component';
+import { TicketStatusIconPipe } from './card-ticket/ticket-status-icon.pipe';
 
 const routes = [
 	{
@@ -25,7 +26,7 @@ const routes = [
 ];
 
 @NgModule({
-	declarations: [TicketsComponent, NewTicketComponent, CardTicketComponent],
+	declarations: [TicketsComponent, NewTicketComponent, CardTicketComponent, TicketStatusIconPipe],
 	imports: [
 		CommonModule,
 		RouterModule.forChild(routes),
