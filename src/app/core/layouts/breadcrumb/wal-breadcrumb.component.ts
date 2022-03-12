@@ -44,15 +44,18 @@ import { WalBreadCcrumbService } from './wal-breadcrumb.service';
 						text-decoration: none;
     					color: $secondary-color;
 						font-weight: bold;
+						padding-top: 1px;
 					}
 
 					a:hover {
 						cursor: pointer;
 						text-decoration: underline;
+						text-decoration-color: $primary-color;
 					}
 
 					&:last-child a {
 						opacity: 0.5;
+						pointer-events: none;
 
 						&:hover {
 							text-decoration: none;
