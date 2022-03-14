@@ -18,6 +18,11 @@ const routes: Routes = [
 		data: { breadcrumb: 'Boletos' }
 	},
 	{
+		path: 'devedores',
+		loadChildren: () => import('./pages/debtors/debtors.module').then(m => m.DebtorsModule),
+		data: { breadcrumb: 'Devedores' }
+	},
+	{
 		path: 'settings',
 		loadChildren: () => import('./pages/settings/settings.module').then(m => m.SettingsModule),
 		data: { breadcrumb: 'Configuração' }

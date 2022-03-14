@@ -1,0 +1,29 @@
+<wal-header-nav></wal-header-nav>
+<div walGrid="3fr 1fr" class="content-chart">
+	<wal-card>
+		<h1>Devedores</h1>
+		<form [formGroup]="formFilter" class="debtors-list__form">
+			<wal-input-text class="debtors-list__form__input" formControlName="name" label="Nome"></wal-input-text>
+			<div class="debtors-list__form__buttons">
+				<wal-button buttonClass="ghost" type="button">Limpar</wal-button>
+				<wal-button buttonClass="secondary" type="submit">Filtrar</wal-button>
+			</div>
+		</form>
+	</wal-card>
+	<wal-card>
+		<div class="debtors-list__resume">
+			<h3>Total de Pessoas</h3> <span>6</span>
+		</div>
+		<div class="debtors-list__resume">
+			<h3>Valor devolvido</h3> <span>R$ 5423,00</span>
+		</div>
+		<div class="debtors-list__resume-button">
+			<wal-button buttonClass="primary" routerLink="novo" type="button">Adicionar</wal-button>
+		</div>
+	</wal-card>
+</div>
+<!-- <div class="debtors-list__grid">
+	<div *ngFor="let debtor of debtors$ | async">
+		<debtors-card [debtor]="debtor" [routerLink]="['detalhe', debtor.id]"></debtors-card>
+	</div>
+</div> -->
