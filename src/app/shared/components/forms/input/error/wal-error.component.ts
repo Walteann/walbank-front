@@ -5,7 +5,7 @@ import {
 	OnDestroy,
 	OnInit,
 } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { UntypedFormControl } from '@angular/forms';
 import { debounceTime, Observable, of, Subscription, tap } from 'rxjs';
 import { ERROR_VALIDATOR } from './error-validator.constant';
 
@@ -26,7 +26,7 @@ import { ERROR_VALIDATOR } from './error-validator.constant';
 	],
 })
 export class WalErrorComponent implements OnInit, OnDestroy {
-	@Input() control: FormControl;
+	@Input() control: UntypedFormControl;
 	show: Observable<boolean>;
 
 	private subscription: Subscription;

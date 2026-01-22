@@ -1,12 +1,12 @@
 import { Input, OnInit, Injector, Component } from '@angular/core';
-import { AbstractControl, ControlValueAccessor, FormControl, FormControlName, FormGroupDirective, NgControl, ValidationErrors } from '@angular/forms';
+import { AbstractControl, ControlValueAccessor, UntypedFormControl, FormControlName, FormGroupDirective, NgControl, ValidationErrors } from '@angular/forms';
 
 @Component({
 	template: ''
 })
 export class ControlValueAccessorModel implements ControlValueAccessor, OnInit {
 
-	formControl: FormControl;
+	formControl: UntypedFormControl;
 
 	onChange: any = (value: any) => {}
 	onTouch: any = () => {}
