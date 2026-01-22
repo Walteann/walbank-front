@@ -1,33 +1,33 @@
 <wal-header-info></wal-header-info>
 
 <wal-header-nav>
-	<wal-button routerLink="new-ticket" type="button">Novo Boleto</wal-button>
+  <wal-button routerLink="new-ticket" type="button">Novo Boleto</wal-button>
 </wal-header-nav>
 
 <wal-card>
-	<h1>Boletos</h1>
+  <h1>Boletos</h1>
 
-	<form [formGroup]="formFilter" (submit)="onSubmit()" class="tickets-form">
-		<div class="tickets-form__fields">
-			<wal-input-text formControlName="description" label="Descrição"></wal-input-text>
-			<wal-input-text formControlName="amount" label="Valor"></wal-input-text>
-			<wal-select
-				label="Categoria"
-				formControlName="category"
-				[options]="categories">
-			</wal-select>
-			<wal-input-text formControlName="dueDate" label="Data de Vencimento"></wal-input-text>
-		</div>
-		<div class="tickets-form__buttons">
-			<wal-button buttonClass="ghost" type="button">Limpar</wal-button>
-			<wal-button buttonClass="secondary" type="submit">Filtrar</wal-button>
-		</div>
-	</form>
+  <form [formGroup]="formFilter" (submit)="onSubmit()" class="tickets-form">
+    <div class="tickets-form__fields">
+      <wal-input-text formControlName="description" label="Descrição"></wal-input-text>
+      <wal-input-text formControlName="amount" label="Valor"></wal-input-text>
+      <wal-select
+        label="Categoria"
+        formControlName="category"
+        [options]="categories">
+      </wal-select>
+      <wal-input-text formControlName="dueDate" label="Data de Vencimento"></wal-input-text>
+    </div>
+    <div class="tickets-form__buttons">
+      <wal-button buttonClass="ghost" type="button">Limpar</wal-button>
+      <wal-button buttonClass="secondary" type="submit">Filtrar</wal-button>
+    </div>
+  </form>
 </wal-card>
 
 <div class="tickets-grid">
-	<ng-container *ngFor="let ticket of tickets">
-		<card-ticket [ticket]="ticket"></card-ticket>
-	</ng-container>
+  @for (ticket of tickets; track ticket) {
+    <card-ticket [ticket]="ticket"></card-ticket>
+  }
 </div>
 

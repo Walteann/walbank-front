@@ -11,9 +11,10 @@ interface Ticket {
 }
 
 @Component({
-	selector: 'card-ticket',
-	templateUrl: './card-ticket.component.html',
-	styleUrls: ['./card-ticket.component.scss']
+    selector: 'card-ticket',
+    templateUrl: './card-ticket.component.html',
+    styleUrls: ['./card-ticket.component.scss'],
+    standalone: false
 })
 export class CardTicketComponent implements OnInit {
 	@Input() ticket: Ticket;

@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, FormControl, Validators, FormArray } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, UntypedFormControl, Validators, UntypedFormArray } from '@angular/forms';
 
 interface City {
     name: string,
     code: string
 }
 @Component({
-	selector: 'app-settings',
-	templateUrl: './settings.component.html',
-	styleUrls: ['./settings.component.scss'],
+    selector: 'app-settings',
+    templateUrl: './settings.component.html',
+    styleUrls: ['./settings.component.scss'],
+    standalone: false
 })
 export class SettingsComponent {
 
@@ -17,15 +18,15 @@ export class SettingsComponent {
     selectedCity: City;
 
 
-	formGroup: FormGroup;
+	formGroup: UntypedFormGroup;
 	constructor(
-		formBuilder: FormBuilder
+		formBuilder: UntypedFormBuilder
 	) {
 		this.formGroup = formBuilder.group({
 			nome: [null, [Validators.required]],
 			city: [null, [Validators.required]],
 			sobreNome: ['', [Validators.maxLength(3)]],
-			ultimoNome: new FormControl({value: 'dsadsad', disabled: true})
+			ultimoNome: new UntypedFormControl({value: 'dsadsad', disabled: true})
 		});
 
 		this.cities = [
@@ -47,14 +48,14 @@ export class SettingsComponent {
 		}
 	}
 
-	private validate(form: FormGroup | FormArray | any): boolean {
+	private validate(form: UntypedFormGroup | UntypedFormArray | any): boolean {
 		Object.keys(form.controls).forEach((key: string) => {
 		  const control = form.controls[key];
 		  control.markAsTouched();
 		  control.markAsDirty();
 		  control.updateValueAndValidity({ emitEvent: true });
 
-		  if (control instanceof FormGroup || control instanceof FormArray) {
+		  if (control instanceof UntypedFormGroup || control instanceof UntypedFormArray) {
 			this.validate(control);
 		  }
 		});

@@ -5,17 +5,19 @@ import {
 	OnDestroy,
 	OnInit,
 } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { UntypedFormControl } from '@angular/forms';
 import { debounceTime, Observable, of, Subscription, tap } from 'rxjs';
 import { ERROR_VALIDATOR } from './error-validator.constant';
 
 @Component({
-	selector: 'wal-error',
-	template: `
-		<small *ngIf="show | async" class="error-text">{{ text }}</small>
-	`,
-	styles: [
-		`
+    selector: 'wal-error',
+    template: `
+		@if (show | async) {
+		  <small class="error-text">{{ text }}</small>
+		}
+		`,
+    styles: [
+        `
 			.error-text {
 				color: red;
 				display: block;
@@ -23,10 +25,11 @@ import { ERROR_VALIDATOR } from './error-validator.constant';
 				margin: 0 0 10px 0;
 			}
 		`,
-	],
+    ],
+    standalone: false
 })
 export class WalErrorComponent implements OnInit, OnDestroy {
-	@Input() control: FormControl;
+	@Input() control: UntypedFormControl;
 	show: Observable<boolean>;
 
 	private subscription: Subscription;

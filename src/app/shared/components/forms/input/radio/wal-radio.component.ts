@@ -1,9 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-	selector: 'wal-radio',
-	templateUrl: 'wal-radio.component.html',
-	styleUrls: ['./wal-radio.component.scss']
+    selector: 'wal-radio',
+    templateUrl: 'wal-radio.component.html',
+    styleUrls: ['./wal-radio.component.scss'],
+    standalone: false
 })
 
 export class WalRadioComponent implements OnInit {

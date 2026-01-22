@@ -1,6 +1,9 @@
 import { Directive, ElementRef, Input } from '@angular/core';
 
-@Directive({ selector: '[walGrid]' })
+@Directive({
+    selector: '[walGrid]',
+    standalone: false
+})
 export class WalGridDirective {
 
 	@Input() set walGrid(value: number | string ) {

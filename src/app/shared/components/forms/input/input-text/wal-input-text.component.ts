@@ -4,16 +4,17 @@ import { NG_VALUE_ACCESSOR } from '@angular/forms';
 import { ControlValueAccessorModel } from '../control-value-acessor.model';
 
 @Component({
-	selector: 'wal-input-text',
-	templateUrl: 'wal-input-text.component.html',
-	styleUrls: ['./wal-input-text.component.scss'],
-	providers: [
-		{
-			provide: NG_VALUE_ACCESSOR,
-			useExisting: forwardRef(() => WalInputTextComponent),
-			multi: true,
-		}
-	],
+    selector: 'wal-input-text',
+    templateUrl: 'wal-input-text.component.html',
+    styleUrls: ['./wal-input-text.component.scss'],
+    providers: [
+        {
+            provide: NG_VALUE_ACCESSOR,
+            useExisting: forwardRef(() => WalInputTextComponent),
+            multi: true,
+        }
+    ],
+    standalone: false
 })
 export class WalInputTextComponent extends ControlValueAccessorModel {
 	@Input() label: string;

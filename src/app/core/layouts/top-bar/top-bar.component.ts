@@ -2,9 +2,10 @@ import { Component, EventEmitter, Output } from '@angular/core';
 
 
 @Component({
-	selector: 'wal-top-bar',
-	templateUrl: 'top-bar.component.html',
-	styleUrls: ['./top-bar.component.scss']
+    selector: 'wal-top-bar',
+    templateUrl: 'top-bar.component.html',
+    styleUrls: ['./top-bar.component.scss'],
+    standalone: false
 })
 
 export class TopBarComponent {
