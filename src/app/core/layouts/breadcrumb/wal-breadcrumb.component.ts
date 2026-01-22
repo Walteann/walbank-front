@@ -17,8 +17,8 @@ import { WalBreadCcrumbService } from './wal-breadcrumb.service';
 		`,
     styles: [
         `
-		@use 'variables';
-		@use url('https://fonts.googleapis.com/css?family=Material+Icons');
+		@use 'variables' as *;
+		@import url('https://fonts.googleapis.com/css?family=Material+Icons');
 
 			ul {
 				& {

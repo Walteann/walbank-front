@@ -8,13 +8,22 @@ import { LayoutModule } from './core/layouts/layouts-module';
 import { CardModule } from './shared/components/card/card.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
-import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import {
+	provideHttpClient,
+	withInterceptorsFromDi,
+} from '@angular/common/http';
 
-@NgModule({ declarations: [AppComponent],
-    bootstrap: [AppComponent], imports: [BrowserModule,
-        BrowserAnimationsModule,
-        CommonModule,
-        AppRoutingModule,
-        LayoutModule,
-        SharedModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
+@NgModule({
+	declarations: [AppComponent],
+	bootstrap: [AppComponent],
+	imports: [
+		BrowserModule,
+		BrowserAnimationsModule,
+		CommonModule,
+		AppRoutingModule,
+		LayoutModule,
+		SharedModule,
+	],
+	providers: [provideHttpClient(withInterceptorsFromDi())],
+})
 export class AppModule {}

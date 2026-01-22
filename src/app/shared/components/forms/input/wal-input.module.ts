@@ -7,7 +7,7 @@ import { WalErrorComponent } from './error/wal-error.component';
 import { WalInputTextComponent } from './input-text/wal-input-text.component';
 import { WalRadioComponent } from './radio/wal-radio.component';
 import { WalSelectComponent } from './select/wal-select.component';
-import {DropdownModule} from 'primeng/dropdown';
+import { AutoCompleteModule } from 'primeng/autocomplete';
 
 const INPUTS_COMPONENTS = [
 	WalCheckboxComponent,
@@ -18,7 +18,7 @@ const INPUTS_COMPONENTS = [
 ];
 
 @NgModule({
-	imports: [CommonModule, FormsModule, ReactiveFormsModule, DropdownModule],
+	imports: [CommonModule, FormsModule, ReactiveFormsModule, AutoCompleteModule],
 	exports: INPUTS_COMPONENTS,
 	declarations: INPUTS_COMPONENTS,
 	providers: [],

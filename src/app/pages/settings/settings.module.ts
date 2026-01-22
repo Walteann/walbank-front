@@ -5,7 +5,7 @@ import { SettingsComponent } from './settings.component';
 import { RouterModule } from '@angular/router';
 import { WalInputModule } from 'src/app/shared/components/forms/input/wal-input.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {DropdownModule} from 'primeng/dropdown';
+import { AutoCompleteModule } from 'primeng/autocomplete';
 
 const routes = [
 	{
@@ -23,7 +23,7 @@ const routes = [
 		RouterModule.forChild(routes),
 		SharedModule,
 		WalInputModule,
-		DropdownModule
+		AutoCompleteModule
 	],
 })
 export class SettingsModule {}
