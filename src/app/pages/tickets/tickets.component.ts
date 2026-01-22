@@ -3,10 +3,11 @@ import { UntypedFormBuilder, UntypedFormGroup } from '@angular/forms';
 import { TICKETS_MOCK } from './tickets-mock.const';
 
 @Component({
-	selector: 'app-tickets',
-	templateUrl: './tickets.component.html',
-	styleUrls: ['./tickets.component.scss'],
-	host: {'class': 'tickets'}
+    selector: 'app-tickets',
+    templateUrl: './tickets.component.html',
+    styleUrls: ['./tickets.component.scss'],
+    host: { 'class': 'tickets' },
+    standalone: false
 })
 export class TicketsComponent {
 

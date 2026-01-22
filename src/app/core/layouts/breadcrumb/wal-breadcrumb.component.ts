@@ -4,8 +4,8 @@ import { Observable } from 'rxjs';
 import { WalBreadCcrumbService } from './wal-breadcrumb.service';
 
 @Component({
-	selector: 'wal-breadcrumb',
-	template: `
+    selector: 'wal-breadcrumb',
+    template: `
 		<ul>
 			<li *ngFor="let breadcrumb of breadcrumbs$ | async">
 				<span class="arrow-right material-icons-outlined">chevron_right</span>
@@ -13,8 +13,8 @@ import { WalBreadCcrumbService } from './wal-breadcrumb.service';
 			</li>
 		</ul>
 	`,
-	styles: [
-		`
+    styles: [
+        `
 		@import 'variables';
 		@import url('https://fonts.googleapis.com/css?family=Material+Icons');
 
@@ -66,7 +66,8 @@ import { WalBreadCcrumbService } from './wal-breadcrumb.service';
 
 			}
 		`,
-	],
+    ],
+    standalone: false
 })
 export class WalBreadcrumbComponent {
 	breadcrumbs$: Observable<Breadcrumb[]>;

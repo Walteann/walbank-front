@@ -2,7 +2,8 @@ import { Input, OnInit, Injector, Component } from '@angular/core';
 import { AbstractControl, ControlValueAccessor, UntypedFormControl, FormControlName, FormGroupDirective, NgControl, ValidationErrors } from '@angular/forms';
 
 @Component({
-	template: ''
+    template: '',
+    standalone: false
 })
 export class ControlValueAccessorModel implements ControlValueAccessor, OnInit {
 

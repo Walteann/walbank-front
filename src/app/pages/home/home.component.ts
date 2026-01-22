@@ -8,9 +8,10 @@ import {
 import { Chart, registerables } from 'chart.js';
 
 @Component({
-	selector: 'wal-home',
-	templateUrl: 'home.component.html',
-	styleUrls: ['./home.component.scss'],
+    selector: 'wal-home',
+    templateUrl: 'home.component.html',
+    styleUrls: ['./home.component.scss'],
+    standalone: false
 })
 export class HomeComponent implements OnInit, AfterViewInit {
 	@ViewChild('myChartBar') myChartBar: ElementRef;

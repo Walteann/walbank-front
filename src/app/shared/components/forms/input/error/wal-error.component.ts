@@ -10,12 +10,12 @@ import { debounceTime, Observable, of, Subscription, tap } from 'rxjs';
 import { ERROR_VALIDATOR } from './error-validator.constant';
 
 @Component({
-	selector: 'wal-error',
-	template: `
+    selector: 'wal-error',
+    template: `
 		<small *ngIf="show | async" class="error-text">{{ text }}</small>
 	`,
-	styles: [
-		`
+    styles: [
+        `
 			.error-text {
 				color: red;
 				display: block;
@@ -23,7 +23,8 @@ import { ERROR_VALIDATOR } from './error-validator.constant';
 				margin: 0 0 10px 0;
 			}
 		`,
-	],
+    ],
+    standalone: false
 })
 export class WalErrorComponent implements OnInit, OnDestroy {
 	@Input() control: UntypedFormControl;

@@ -4,9 +4,10 @@ import { DebtorsService } from './../../../core/http/debtors.service';
 import { Debtor } from './../../../shared/model/debtor.model';
 
 @Component({
-	selector: 'app-debtors-detail',
-	templateUrl: './debtors-detail.component.html',
-	styleUrls: ['./debtors-detail.component.scss'],
+    selector: 'app-debtors-detail',
+    templateUrl: './debtors-detail.component.html',
+    styleUrls: ['./debtors-detail.component.scss'],
+    standalone: false
 })
 export class DebtorsDetailComponent implements OnInit {
 	debtor: Debtor = new Debtor();

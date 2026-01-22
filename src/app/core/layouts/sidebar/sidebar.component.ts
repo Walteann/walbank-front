@@ -1,9 +1,10 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
-	selector: 'wal-sidebar',
-	templateUrl: 'sidebar.component.html',
-	styleUrls: ['./sidebar.component.scss'],
+    selector: 'wal-sidebar',
+    templateUrl: 'sidebar.component.html',
+    styleUrls: ['./sidebar.component.scss'],
+    standalone: false
 })
 export class SidebarComponent {
 
