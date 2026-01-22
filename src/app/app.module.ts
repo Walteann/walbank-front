@@ -12,6 +12,8 @@ import {
 	provideHttpClient,
 	withInterceptorsFromDi,
 } from '@angular/common/http';
+import { providePrimeNG } from 'primeng/config';
+import Aura from '@primeuix/themes/aura';
 
 @NgModule({
 	declarations: [AppComponent],
@@ -24,6 +26,17 @@ import {
 		LayoutModule,
 		SharedModule,
 	],
-	providers: [provideHttpClient(withInterceptorsFromDi())],
+	providers: [
+		provideHttpClient(withInterceptorsFromDi()),
+		providePrimeNG({
+        theme: {
+            preset: Aura,
+            options: {
+                darkModeSelector: false, // Desativa modo escuro se não quiser
+                cssLayer: false // Se tiver problemas com CSS legado, deixe false
+            }
+        }
+    })
+	],
 })
 export class AppModule {}

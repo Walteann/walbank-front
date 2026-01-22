@@ -8,14 +8,14 @@ import { ControlValueAccessorModel } from '../control-value-acessor.model';
     template: `
 		<div class="wal-select">
 			<label>{{ label }}</label>
-			<p-autocomplete
+			<p-select
 				[formControl]="formControl"
-				[suggestions]="options"
+				[options]="options"
 				[name]="name"
 				[optionLabel]="optionLabel"
 				[optionValue]="optionValue"
 			>
-			</p-autocomplete>
+			</p-select>
 			<wal-error [control]="formControl"></wal-error>
 		</div>
 	`,
