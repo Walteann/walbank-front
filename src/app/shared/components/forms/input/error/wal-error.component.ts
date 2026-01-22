@@ -12,8 +12,10 @@ import { ERROR_VALIDATOR } from './error-validator.constant';
 @Component({
     selector: 'wal-error',
     template: `
-		<small *ngIf="show | async" class="error-text">{{ text }}</small>
-	`,
+		@if (show | async) {
+		  <small class="error-text">{{ text }}</small>
+		}
+		`,
     styles: [
         `
 			.error-text {

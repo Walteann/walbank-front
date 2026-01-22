@@ -7,12 +7,14 @@ import { WalBreadCcrumbService } from './wal-breadcrumb.service';
     selector: 'wal-breadcrumb',
     template: `
 		<ul>
-			<li *ngFor="let breadcrumb of breadcrumbs$ | async">
-				<span class="arrow-right material-icons-outlined">chevron_right</span>
-				<a [href]="breadcrumb.url">{{ breadcrumb.label }}</a>
-			</li>
+		  @for (breadcrumb of breadcrumbs$ | async; track breadcrumb) {
+		    <li>
+		      <span class="arrow-right material-icons-outlined">chevron_right</span>
+		      <a [href]="breadcrumb.url">{{ breadcrumb.label }}</a>
+		    </li>
+		  }
 		</ul>
-	`,
+		`,
     styles: [
         `
 		@import 'variables';
